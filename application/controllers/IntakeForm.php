@@ -63,8 +63,8 @@ class IntakeForm extends CI_Controller{
                 'protocol'  => 'smtp',
                 'smtp_host' => 'ssl://smtp.bizmail.yahoo.com',
                 'smtp_port' => 465,
-                'smtp_user' => 'info@themobiledrs.com',
-                'smtp_pass' => 'ucjemnxyefywdbyw',
+                'smtp_user' => 'info@shinemmg.com',
+                'smtp_pass' => 'hzpxfpcoijquzeuz',
                 'mailtype'  => 'html',
                 'newline' 	=> "\r\n"
             );
@@ -74,21 +74,21 @@ class IntakeForm extends CI_Controller{
             $filename = 'Home Visit Form PDF';
             $this->pdf->generate_hv($html, $tmpDir . $filename);
 
-            $this->email->from('info@themobiledrs.com', 'The MobileDrs');
+            $this->email->from('info@shinemmg.com', 'Shine MMG');
             // $this->email->reply_to('michelle@themobiledrs.com', 'The MobileDrs');
             $this->email->to($data['pf_email']);
             $this->email->subject('Home visit request form');
-            $this->email->message('Attached is a copy of the Home Visit Request form submitted to The Mobile Drs.');
+            $this->email->message('Attached is a copy of the Home Visit Request form submitted to Shine MMG.');
             $this->email->attach($tmpDir . $filename . '.pdf', 'attachment', $filename . '.pdf');
 
             $send = $this->email->send();
 
 
-            $this->email->from('info@themobiledrs.com', 'The MobileDrs');
+            $this->email->from('info@shinemmg.com', 'Shine MMG');
             // $this->email->reply_to('michelle@themobiledrs.com', 'The MobileDrs');
-            $this->email->to('Intake@themobilemd.com');
+            $this->email->to('appointments@shinemmg.com');
             $this->email->subject('Home visit request form');
-            $this->email->message('Attached is a copy of the Home Visit Request form submitted to The Mobile Drs.');
+            $this->email->message('Attached is a copy of the Home Visit Request form submitted to Shine MMG.');
             $this->email->attach($tmpDir . $filename . '.pdf', 'attachment', $filename . '.pdf');
 
             $send = $this->email->send();
