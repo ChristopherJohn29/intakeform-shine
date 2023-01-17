@@ -83,7 +83,6 @@ class IntakeForm extends CI_Controller{
 
             $send = $this->email->send();
 
-
             $this->email->from('info@shinemmg.com', 'Shine MMG');
             // $this->email->reply_to('michelle@themobiledrs.com', 'The MobileDrs');
             $this->email->to('appointments@shinemmg.com');
