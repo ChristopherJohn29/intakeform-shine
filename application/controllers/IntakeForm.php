@@ -86,7 +86,7 @@ class IntakeForm extends CI_Controller{
 
             $this->email->from('info@shinemmg.com', 'Shine MMG');
             // $this->email->reply_to('michelle@themobiledrs.com', 'The MobileDrs');
-            $this->email->to('christopherjohngamo@gmail.com');
+            $this->email->to('appointments@shinemmg.com');
             $this->email->subject('Home visit request form');
             $this->email->message('Attached is a copy of the Home Visit Request form submitted to Shine MMG.');
             $this->email->attach($tmpDir . $filename . '.pdf', 'attachment', $filename . '.pdf');
