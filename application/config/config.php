@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://appointment.shinemmg.com/';
+$config['base_url'] = 'https://appointment.shinemmg.com/';
 
 /*
 |--------------------------------------------------------------------------
